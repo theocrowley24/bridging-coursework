@@ -29,8 +29,34 @@ body {
 
 .banner p {
     width: 600px;
+    max-width: 80vw;
     margin: auto;
     margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner h1 {
+        line-height: normal;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .banner h1 {
+        font-size: 3em;
+        line-height: normal;
+        text-align: left;
+        margin-left: 17.5px;
+    }
+
+    .banner p {
+        text-align: left;
+        font-size: 1.25em;
+    }
+
+    .banner {
+        padding-bottom: 25px;
+    }
 }
 
 .navbar-light {
@@ -51,6 +77,10 @@ body {
 }
 
 .navbar-light .navbar-brand {
+    color: var(--primary-color);
+}
+
+.navbar-light .navbar-toggler {
     color: var(--primary-color);
 }
 
