@@ -84,6 +84,10 @@ body {
     color: var(--primary-color);
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url(/static/images/menu_icon.png);
+}
+
 .btn {
     border-radius: 0;
     padding: 15px;
