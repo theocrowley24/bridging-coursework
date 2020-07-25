@@ -7,15 +7,15 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def home(request):
-    return render(request, 'cms/home.html', {})
+    return render(request, 'blog/home.html', {})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'cms/post_list.html', {'posts': posts})
+    return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    return render(request, 'cms/post_detail.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {'post': post})
 
 def post_new(request):
     if request.method == "POST":
@@ -29,4 +29,4 @@ def post_new(request):
     else:
         form = PostForm()
 
-    return render(request, 'cms/post_new.html', {'form': form})
+    return render(request, 'blog/post_new.html', {'form': form})
