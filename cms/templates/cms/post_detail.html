@@ -1,3 +1,15 @@
 {% extends 'cms/base.html' %}
 
-{{ post.title }}
+{% block content %}
+    <div class="full-post">
+        <h1>{{ post.title }}</h1>
+
+        <h3>{{post.author}} - {{post.published_date}}</h3>
+
+        <div class="text">
+            <p>
+                {{post.text}}
+            </p>
+        </div>    
+    </div>
+{% endblock %}
