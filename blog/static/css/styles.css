@@ -29,6 +29,10 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    text-align: center;
+}
+
 h3 {
     text-align: center;
 }
@@ -199,3 +203,10 @@ h3 {
     width: 800px;
 }
 
+.new-post-wrapper {
+    width: 500px;
+    margin: auto;
+
+    background: var(--background-color-rgb);
+    padding: 25px;
+}
