@@ -1,0 +1,37 @@
+.wrapper {
+    width: 800px;
+    padding-top: 50px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    text-transform: uppercase;
+    border-bottom: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.experience {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.experience > .experienceItem {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid grey;
+}
+
+.experience > .experienceItem > .name {
+    font-weight: bold;
+}
+
+.experience > .experienceItem > .description {
+
+}
+
+.experience > .experienceItem > .date {
+    font-weight: bold;
+}

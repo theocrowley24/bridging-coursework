@@ -19,6 +19,9 @@ def post_detail(request, pk):
 
 def post_new(request):
     if request.method == "POST":
+        if request.user.is_anonymous:
+            return redirect('home')
+
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit = False)

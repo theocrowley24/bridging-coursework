@@ -25,7 +25,7 @@ SECRET_KEY = '1*krnvcnyo@ve=z+u4zp#3u%hx_z#$xx-k^f_8wi!o_m+xs4hn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.blogConfig'
+    'blog.apps.blogConfig',
+    'cv.apps.CvConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'cv/templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

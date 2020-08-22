@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="title">
+        <h1>{{ cv.name }}</h1>
+    </div>
+
+    <p id="my-info">{{ cv.address }} / {{ cv.phoneNumber }} / {{ cv.emailAddress }}</p>
+    
+    <h2 id="about-me">About me</h2>
+    
+    <p id="about-me-text">
+        {{ cv.aboutMe }}
+    </p>
+    
+    <h2 id="qualifications">Qualifcations</h2>
+    {% if not request.user.is_anonymous %}
+        <a href="addQualification">Add</a>
+    {% endif %}
+    
+    <div id="qualifications-wrapper" class="experience">
+        {% for q in qualifications %}
+            <div class="experienceItem">
+                <h5 class="name">
+                    {{q.name}}
+                </h5>
+
+                <div class="description">
+                    {{q.description}}
+                </div>
+                
+
+                <div class="date">
+                    {{q.startDate}} - {{q.endDate}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <h2 id="experience">Experience</h2>
+    {% if not request.user.is_anonymous %}
+        <a href="addExperience">Add</a>
+    {% endif %}
+    
+    <div id="experience-wrapper" class="experience">
+        {% for e in experience %}
+            <div class="experienceItem">
+                <h5 class="name">
+                    {{e.name}}
+                </h5>
+
+                <div class="description">
+                    {{e.description}}
+                </div>
+                
+
+                <div class="date">
+                    {{e.startDate}} - {{e.endDate}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
