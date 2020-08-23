@@ -210,3 +210,8 @@ h3 {
     background: var(--background-color-rgb);
     padding: 25px;
 }
+
+.date {
+    display: flex;
+    margin-left: auto;
+}
