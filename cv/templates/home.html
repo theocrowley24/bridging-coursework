@@ -5,6 +5,9 @@
 <div class="wrapper">
     <div class="title">
         <h1>{{ cv.name }}</h1>
+        {% if not request.user.is_anonymous %}
+            <a href="edit">Edit</a>
+        {% endif %}
     </div>
 
     <p id="my-info">{{ cv.address }} / {{ cv.phoneNumber }} / {{ cv.emailAddress }}</p>
