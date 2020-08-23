@@ -9,7 +9,7 @@
 
 body {
     background-color: var(--dark-background-color);
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffree4kwallpapers.com%2Fuploads%2Foriginals%2F2017%2F05%2F09%2Fretro-80s--wallpaper.jpg&f=1&nofb=1);
+    background-image: url(static/blog/images/bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -129,7 +129,7 @@ h3 {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url(/static/images/menu_icon.png);
+    background-image: url(static/images/blog/menu_icon.png);
 }
 
 .btn {
