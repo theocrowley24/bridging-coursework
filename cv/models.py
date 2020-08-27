@@ -12,12 +12,12 @@ class Cv(models.Model):
 
 class Qualification(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(default="", null=False)
-    startDate = models.DateField(default=timezone.now())
-    endDate = models.DateField(default=timezone.now(), null=False)
+    description = models.TextField()
+    startDate = models.DateField()
+    endDate = models.DateField()
 
 class Experience(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(default="", null=False)
-    startDate = models.DateField(default=timezone.now())
-    endDate = models.DateField(default=timezone.now(), null=False)
+    description = models.TextField()
+    startDate = models.DateField()
+    endDate = models.DateField()
